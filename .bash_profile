@@ -56,15 +56,18 @@ alias doctrine-create="php bin/console doctrine:database:create"
 alias doctrine-update="php bin/console doctrine:schema:update --force"
 alias doctrine-fixtures="php bin/console doctrine:fixtures:load"
 
+#symfony-debug
+alias routes="php bin/console debug:router"
+
 doctrineRebuild(){
 	if [ -f "bin/console" ]
 		then
 			doctrine-drop
 			doctrine-create
 			doctrine-update
-			doctrine-fixtures
+			doctrine-fixtures --no-interaction
 		else
-			echo "Console is not available. Actual folder: "
+			echo "Console is not available in current folder: "
 			pwd
 	fi
 }
