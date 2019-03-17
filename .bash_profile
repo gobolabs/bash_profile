@@ -77,9 +77,9 @@ alias get-back-rsync="vagrant gatling-rsync-auto"
 
 
 #Load private bash profile if exists.
-if [ -f "~/.bash_profile_private" ]
+if [ -f ".bash_profile_private" ]
 	then
-		source "~/.bash_profile_private"
+		source ".bash_profile_private"
 	else
 		echo "no private bash profile file found"
 fi
