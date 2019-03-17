@@ -67,7 +67,7 @@ doctrineRebuild(){
 			doctrine-update
 			doctrine-fixtures --no-interaction
 		else
-			echo "Console is not available in current folder: "
+			echo "Symfony PHP console is not available in current folder: "
 			pwd
 	fi
 }
@@ -76,4 +76,10 @@ doctrineRebuild(){
 alias get-back-rsync="vagrant gatling-rsync-auto"
 
 
-
+#Load private bash profile if exists.
+if [ -f "~/.bash_profile_private" ]
+	then
+		source "~/.bash_profile_private"
+	else
+		echo "no private bash profile file found"
+fi
