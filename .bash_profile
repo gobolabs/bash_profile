@@ -34,8 +34,7 @@ test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shel
 alias dc="docker-compose"
 alias dcr="docker-compose run --rm "
 alias dps="docker ps --format='{{.Names}}'"
-complete -F _docker_compose dc
-complete -F _docker-machine dm
+
 #Example of docker up helper
 #alias dcmini="dc up -d <App1> <App2> <App3> mq"
 
@@ -93,7 +92,5 @@ if [ -f ".bash_profile_private" ]
 	else
 		echo "no private bash profile file found"
 fi
-
-source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 
 export PROMPT_COMMAND=checkGitOnCurrentFolder
